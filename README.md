@@ -34,10 +34,10 @@ The entry point to the llmrank package is the pipeline module which provides dif
 from llmrank import ChainedFFNPipeline
 from llmrank.score import WeightedPageRankScorer
 from llmrank.prune import LocalPruner
+from llmrank.utils import load_hf_model
 
 # Load model
 model, tokenizer = load_hf_model("./artifacts/model/open_llama_3b_v2/") 
-device_map = model.hf_device_map
 
 # Define model structure
 structure_dict = {
