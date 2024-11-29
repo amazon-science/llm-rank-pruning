@@ -53,7 +53,7 @@ pruner = LocalPruner(amount=0.3)
 pipeline = ChainedFFNPipeline(model, tokenizer, structure_dict, scorer, pruner, "cuda")
 pruned_model = pipeline.run()
 ```
-The **experiment** module acts as a CLI tool for running batched experiments. It takes a list of fixed and iterable arguments for different networks, scoring functions, pruning methods and pruning amounts and creates and runs the relevant pipeline for each experiment. For more details refer to the [experiment README](https://gitlab.aws.dev/adavidho/mlp-rank-pruning/-/blob/main/experiments/README.md?ref_type=heads). 
+The **experiment** module acts as a CLI tool for running batched experiments. It takes a list of fixed and iterable arguments for different networks, scoring functions, pruning methods and pruning amounts and creates and runs the relevant pipeline for each experiment. For more details refer to the [experiment README](experiments/README.md). 
 
 ## Security
 
